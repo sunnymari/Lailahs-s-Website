@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Lailah Khalida">
+    <title>Contact • Lailah Khalida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=16">
+</head>
+<body>
+    <div class="bubbles" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav" aria-label="Primary">
+                <a class="brand" href="index.html">Lailah Khalida</a>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="art.html">Art</a>
+                    <a href="contact.html" aria-current="page">Contact</a>
+                </div>
+            </nav>
+            <h1>Contact</h1>
+            <p class="tagline">Say hello — I’d love to hear from you</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <form id="contact-form" class="form" autocomplete="on">
+                <div class="grid">
+                    <label class="field">
+                        <span>Name</span>
+                        <input type="text" name="name" required placeholder="Your name" />
+                    </label>
+                    <label class="field">
+                        <span>Email</span>
+                        <input type="email" name="email" required placeholder="you@example.com" />
+                    </label>
+                </div>
+                <label class="field">
+                    <span>Subject</span>
+                    <input type="text" name="subject" placeholder="What's up?" />
+                </label>
+                <label class="field">
+                    <span>Message</span>
+                    <textarea name="message" rows="6" required placeholder="Write your message..."></textarea>
+                </label>
+                <div class="actions">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+                <p id="contact-note" class="note" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© <span id="year"></span> Lailah Khalida. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <script src="script.js?v=10"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
