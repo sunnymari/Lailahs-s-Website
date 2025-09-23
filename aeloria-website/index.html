@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aeloria collective - Modeling & Social Media Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">A</div>
+                <span class="logo-text">aeloria collective</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="hero-logo-icon">
+                    <div class="floral-accent"></div>
+                    <span class="logo-letter">A</span>
+                </div>
+                <h1 class="hero-title">aeloria collective</h1>
+            </div>
+            <p class="hero-subtitle">Elegant modeling meets strategic social media management</p>
+            <p class="hero-description">We craft authentic brand stories through stunning visuals and thoughtful digital presence</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">Our Services</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Crafting exceptional experiences in modeling and digital presence</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Professional Modeling</h3>
+                    <p>High-end fashion and lifestyle photography with a focus on authenticity and elegance</p>
+                    <ul>
+                        <li>Fashion & Editorial</li>
+                        <li>Commercial & Brand</li>
+                        <li>Lifestyle & Portrait</li>
+                        <li>Event & Runway</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Strategic content creation and community building for authentic brand growth</p>
+                    <ul>
+                        <li>Content Strategy</li>
+                        <li>Visual Storytelling</li>
+                        <li>Community Management</li>
+                        <li>Analytics & Insights</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Brand Development</h3>
+                    <p>Creating cohesive visual identities that resonate with your audience</p>
+                    <ul>
+                        <li>Visual Identity</li>
+                        <li>Brand Guidelines</li>
+                        <li>Creative Direction</li>
+                        <li>Campaign Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <p>Showcasing our finest work in modeling and digital creativity</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="modeling">Modeling</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="brand">Brand Work</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="modeling">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-image"></i>
+                            <span>Fashion Editorial</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Elegant Fashion Series</h4>
+                            <p>Sophisticated editorial work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Social Campaign</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Brand Social Strategy</h4>
+                            <p>Engaging content creation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="brand">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Brand Identity</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Luxury Brand Development</h4>
+                            <p>Complete visual identity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="modeling">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-gem"></i>
+                            <span>Commercial Work</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>High-End Commercial</h4>
+                            <p>Luxury brand collaboration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-heart"></i>
+                            <span>Lifestyle Content</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Lifestyle Campaign</h4>
+                            <p>Authentic brand storytelling</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="brand">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-star"></i>
+                            <span>Creative Direction</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Creative Campaign</h4>
+                            <p>Full creative direction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About aeloria collective</h2>
+                    <p>We are a boutique creative collective specializing in elegant modeling and strategic social media management. Our approach combines timeless aesthetics with modern digital strategies to create authentic brand experiences.</p>
+                    <p>Founded on the principles of sophistication, authenticity, and thoughtful creativity, we work with discerning clients who value quality over quantity and meaningful connections over fleeting trends.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <i class="fas fa-users"></i>
+                        <span>Our Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Work Together</h2>
+                <p>Ready to elevate your brand? We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@aeloriacollective.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="modeling">Professional Modeling</option>
+                            <option value="social">Social Media Management</option>
+                            <option value="brand">Brand Development</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">A</div>
+                    <span class="logo-text">aeloria collective</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 aeloria collective. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
