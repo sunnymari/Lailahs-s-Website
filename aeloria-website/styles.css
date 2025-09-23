@@ -449,9 +449,11 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-text h2 {
