@@ -42,29 +42,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Portfolio Filter Functionality
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-        
-        const filterValue = button.getAttribute('data-filter');
-        
-        portfolioItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.style.display = 'block';
-                item.style.animation = 'fadeInUp 0.5s ease forwards';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    });
-});
 
 // Contact Form Handling
 const contactForm = document.querySelector('.contact-form');
@@ -175,7 +152,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.service-card, .portfolio-item, .about-text, .contact-info, .contact-form');
+    const animateElements = document.querySelectorAll('.service-card, .about-text, .contact-info, .contact-form');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
@@ -283,10 +260,6 @@ style.textContent = `
         transform: translateY(-8px);
     }
     
-    .portfolio-item:hover {
-        transform: translateY(-8px);
-    }
-    
     /* Smooth transitions for all interactive elements */
     * {
         transition: all 0.3s ease;
@@ -329,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Add click effects to cards
-    const cards = document.querySelectorAll('.service-card, .portfolio-item');
+    const cards = document.querySelectorAll('.service-card');
     cards.forEach(card => {
         card.addEventListener('click', () => {
             card.style.transform = 'scale(0.98)';
