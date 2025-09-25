@@ -43,17 +43,10 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Initialize EmailJS
-(function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
-})();
-
-// Contact Form Handling
+// Contact Form Handling with Formspree
 const contactForm = document.querySelector('.contact-form');
 
 contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
     // Get form data
     const formData = new FormData(contactForm);
     const name = formData.get('name');
@@ -63,6 +56,7 @@ contactForm.addEventListener('submit', (e) => {
     
     // Simple validation
     if (!name || !email || !service || !message) {
+        e.preventDefault();
         showNotification('Please fill in all fields.', 'error');
         return;
     }
@@ -74,29 +68,15 @@ contactForm.addEventListener('submit', (e) => {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Prepare email parameters
-    const templateParams = {
-        from_name: name,
-        from_email: email,
-        service: service,
-        message: message,
-        to_name: 'aeloria collective'
-    };
-    
-    // Send email using EmailJS
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
-            contactForm.reset();
-        }, function(error) {
-            console.log('FAILED...', error);
-            showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
-        })
-        .finally(function() {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        });
+    // Let the form submit naturally to Formspree
+    // Formspree will handle the email sending
+    // We'll show success message after a delay
+    setTimeout(() => {
+        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+        contactForm.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 2000);
 });
 
 // Notification System
