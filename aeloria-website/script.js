@@ -43,6 +43,11 @@ window.addEventListener('scroll', () => {
 });
 
 
+// Initialize EmailJS
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
+})();
+
 // Contact Form Handling
 const contactForm = document.querySelector('.contact-form');
 
@@ -62,20 +67,36 @@ contactForm.addEventListener('submit', (e) => {
         return;
     }
     
-    // Simulate form submission
+    // Get submit button
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Simulate API call
-    setTimeout(() => {
-        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
-        contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
+    // Prepare email parameters
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        service: service,
+        message: message,
+        to_name: 'aeloria collective'
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+            contactForm.reset();
+        }, function(error) {
+            console.log('FAILED...', error);
+            showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
+        })
+        .finally(function() {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
 });
 
 // Notification System
