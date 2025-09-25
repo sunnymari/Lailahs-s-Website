@@ -76,7 +76,19 @@ contactForm.addEventListener('submit', (e) => {
         contactForm.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    }, 3000);
+});
+
+// Handle form submission success/error
+contactForm.addEventListener('submit', function(e) {
+    // Let the form submit to Formspree
+    // Formspree will redirect back to a success page or show an error
+    setTimeout(() => {
+        // Check if we're still on the same page (form submission failed)
+        if (window.location.href.includes('formspree.io')) {
+            showNotification('Message sent successfully!', 'success');
+        }
+    }, 1000);
 });
 
 // Notification System
