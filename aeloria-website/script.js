@@ -341,7 +341,7 @@ if (emailInput) {
 let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
-const totalSlides = slides.length;
+const totalSlides = 3; // Only 3 slides
 
 function showSlide(index) {
     // Remove active class from all slides and indicators
